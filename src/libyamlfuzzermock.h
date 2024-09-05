@@ -78,7 +78,30 @@ extern "C" {
 // FuzzPodMutator is the exported function for fuzzing pod mutator.
 //
 extern void TestSyncPodsStartPod(char* data, size_t size);
+extern void TestDispatchWorkOfCompletedPod(char* data, size_t size);
+extern void TestDispatchWorkOfActivePod(char* data, size_t size);
+extern void TestHandlePodRemovesWhenSourcesAreReady(char* data, size_t size);
+extern void TestHandlePortConflicts(char* data, size_t size);
+extern void TestHandleHostNameConflicts(char* data, size_t size);
+extern void TestHandleNodeSelectorBasedOnOS(char* data, size_t size);
+extern void TestHandleMemExceeded(char* data, size_t size);
 extern void TestHandlePluginResources(char* data, size_t size);
+extern void TestValidateContainerLogStatus(char* data, size_t size);
+extern void TestCreateMirrorPod(char* data, size_t size);
+extern void TestDeleteOutdatedMirrorPod(char* data, size_t size);
+extern void TestDeleteOrphanedMirrorPods(char* data, size_t size);
+extern void TestNetworkErrorsWithoutHostNetwork(char* data, size_t size);
+extern void TestFilterOutInactivePods(char* data, size_t size);
+extern void TestPurgingObsoleteStatusMapEntries(char* data, size_t size);
+extern void TestSyncPodsSetStatusToFailedForPodsThatRunTooLong(char* data, size_t size);
+extern void TestSyncPodsDoesNotSetPodsThatDidNotRunTooLongToFailed(char* data, size_t size);
+extern void TestDeletePodDirsForDeletedPods(char* data, size_t size);
+extern void TestGetPodsToSync(char* data, size_t size);
+extern void TestGenerateAPIPodStatusWithSortedContainers(char* data, size_t size);
+extern void TestGenerateAPIPodStatusWithReasonCache(char* data, size_t size);
+extern void TestGenerateAPIPodStatusWithDifferentRestartPolicies(char* data, size_t size);
+extern void TestHandlePodAdditionsInvokesPodAdmitHandlers(char* data, size_t size);
+extern void TestPodResourceAllocationReset(char* data, size_t size);
 
 #ifdef __cplusplus
 }
