@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+package teststruct; // Replace with your actual package name
+
+message test {
+  optional string CharValue = 2;
+}
