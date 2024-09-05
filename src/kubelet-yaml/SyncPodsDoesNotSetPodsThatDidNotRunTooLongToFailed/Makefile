@@ -1,9 +1,9 @@
 # Paths and file locations
-PROTODEFS_DIR=$(HOME)/kubefuzzthesis/protos/proto_defs
+PROTODEFS_DIR=$(HOME)/kubefuzzthesis/src
 PROTOBUF_LIB_DIR=$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator/build/external.protobuf/lib
 LPM_LIB_DIR=$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator/build/src
 INC_DIRS=-I$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator/build/external.protobuf/include -I$(HOME)/kubefuzzthesis/libs/libprotobuf-mutator -I$(PROTODEFS_DIR)
-GO_EXPORT_LIB=../../libpodfuzzermock.a
+GO_EXPORT_LIB=../../libyamlfuzzermock.a
 # Compiler settings
 CXX=clang++
 CXXFLAGS=-g -fsanitize=fuzzer,address $(INC_DIRS)
